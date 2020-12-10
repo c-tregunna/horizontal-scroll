@@ -416,6 +416,9 @@ body {
 .slide {
   width: 100vw;
   height: 100vh;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  padding: 40px 20px;
 }
 
 .wrapper {
@@ -429,6 +432,10 @@ body {
 
 .one {
   background: #6bb16b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .two {
@@ -444,7 +451,7 @@ body {
 }
 
 .outer-wrapper {
-  width: 100vh;
+  width: 95vh;
   height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
   transform-origin: top left;
@@ -454,13 +461,49 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
-  margin-top: 40px;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
+#title {
+  font-size: 2em;
+  font-style: italic;
+}
+
+.one h1 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 23%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 nav {
   position: fixed;
   top: 0;
@@ -477,7 +520,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
-  height: 40px;
+  height: 5vh;
 }
 .top_nav li a {
   text-decoration: none;
