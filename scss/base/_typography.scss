@@ -1,15 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+}
+
 #title {
-  font-size: 2em;
+  font-size: 4em;
   font-style: italic;
 }
 
 .one h1 {
+  font-size: 6em;
+  text-transform: uppercase;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  letter-spacing: 0.05em; /* Adjust as needed */
+  // animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
@@ -18,7 +29,7 @@
     width: 0;
   }
   to {
-    width: 23%;
+    width: 73%;
   }
 }
 

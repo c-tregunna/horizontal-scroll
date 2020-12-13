@@ -1,6 +1,6 @@
 let i = 0;
 let text = '< Developing Web Developer />';
-let speed = 200;
+let speed = 70;
 
 function slideShow() {
   if (i < text.length) {
